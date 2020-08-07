@@ -72,7 +72,7 @@ function CartPage(props) {
     }
 
     const transactionError = () => {
-        console.log('Paypal error')
+        console.log('Paypal erro')
     }
 
     const transactionCanceled = () => {
@@ -82,7 +82,7 @@ function CartPage(props) {
 
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
-            <h1>My Cart</h1>
+            <h1>Meu Carrinho</h1>
             <div>
 
                 <UserCardBlock
@@ -107,7 +107,7 @@ function CartPage(props) {
                         }}>
                             <br />
                             <Empty description={false} />
-                            <p>No Items In the Cart</p>
+                            <p>Carrinho vazio</p>
 
                         </div>
                 }

@@ -7,25 +7,23 @@ const { Title } = Typography;
 const { TextArea } = Input;
 
 const Continents = [
-    { key: 1, value: "Africa" },
-    { key: 2, value: "Europe" },
-    { key: 3, value: "Asia" },
-    { key: 4, value: "North America" },
-    { key: 5, value: "South America" },
-    { key: 6, value: "Australia" },
-    { key: 7, value: "Antarctica" }
+    { key: 1, value: "Lanche" },
+    { key: 2, value: "Bebida" },
+    { key: 3, value: "Acompanhamento" },
+    { key: 4, value: "Combo" },
+    { key: 5, value: "Promoção" }
 ]
 
 function UploadProductPage(props) {
 
-    const [TitleValue, setTitleValue] = useState("")
+    const [TitleValue, setTitleValue] = useState("") //string vazia
     const [DescriptionValue, setDescriptionValue] = useState("")
-    const [PriceValue, setPriceValue] = useState(0)
-    const [ContinentValue, setContinentValue] = useState(1)
+    const [PriceValue, setPriceValue] = useState(0) //começa com o valor zero
+    const [ContinentValue, setContinentValue] = useState(1) //de acordo com as keys acima
 
     const [Images, setImages] = useState([])
 
-
+    //pra poder escrever
     const onTitleChange = (event) => {
         setTitleValue(event.currentTarget.value)
     }
@@ -78,7 +76,7 @@ function UploadProductPage(props) {
     return (
         <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <Title level={2}> Upload Travel Product</Title>
+                <Title level={2}> Adicionar Produto</Title>
             </div>
 
 
@@ -89,21 +87,21 @@ function UploadProductPage(props) {
 
                 <br />
                 <br />
-                <label>Title</label>
+                <label>Nome</label>
                 <Input
                     onChange={onTitleChange}
                     value={TitleValue}
                 />
                 <br />
                 <br />
-                <label>Description</label>
+                <label>Descrição</label>
                 <TextArea
                     onChange={onDescriptionChange}
                     value={DescriptionValue}
                 />
                 <br />
                 <br />
-                <label>Price($)</label>
+                <label>Preço(R$)</label>
                 <Input
                     onChange={onPriceChange}
                     value={PriceValue}
@@ -121,7 +119,7 @@ function UploadProductPage(props) {
                 <Button
                     onClick={onSubmit}
                 >
-                    Submit
+                    Enviar
                 </Button>
 
             </Form>

@@ -48,18 +48,18 @@ function RegisterPage(props) {
       }}
       validationSchema={Yup.object().shape({
         name: Yup.string()
-          .required('Name is required'),
+          .required('Preencha o nome'),
         lastName: Yup.string()
-          .required('Last Name is required'),
+          .required('Preencha o sobrenome'),
         email: Yup.string()
-          .email('Email is invalid')
-          .required('Email is required'),
+          .email('Email inválido')
+          .required('Email necessário'),
         password: Yup.string()
-          .min(6, 'Password must be at least 6 characters')
-          .required('Password is required'),
+          .min(6, 'Senha precisa ter pelo menos 6 dígitos')
+          .required('Senha necessária'),
         confirmPassword: Yup.string()
-          .oneOf([Yup.ref('password'), null], 'Passwords must match')
-          .required('Confirm Password is required')
+          .oneOf([Yup.ref('password'), null], 'Senhas devem coincidir')
+          .required('Confirme sua senha')
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -98,13 +98,13 @@ function RegisterPage(props) {
         } = props;
         return (
           <div className="app">
-            <h2>Sign up</h2>
+            <h2>Cadastro</h2>
             <Form style={{ minWidth: '375px' }} {...formItemLayout} onSubmit={handleSubmit} >
 
-              <Form.Item required label="Name">
+              <Form.Item required label="Nome">
                 <Input
                   id="name"
-                  placeholder="Enter your name"
+                  placeholder="Digite seu nome"
                   type="text"
                   value={values.name}
                   onChange={handleChange}
@@ -118,10 +118,10 @@ function RegisterPage(props) {
                 )}
               </Form.Item>
 
-              <Form.Item required label="Last Name">
+              <Form.Item required label="Sobrenome">
                 <Input
                   id="lastName"
-                  placeholder="Enter your Last Name"
+                  placeholder="Digite seu sobrenome"
                   type="text"
                   value={values.lastName}
                   onChange={handleChange}
@@ -138,7 +138,7 @@ function RegisterPage(props) {
               <Form.Item required label="Email" hasFeedback validateStatus={errors.email && touched.email ? "error" : 'success'}>
                 <Input
                   id="email"
-                  placeholder="Enter your Email"
+                  placeholder="Digite seu Email"
                   type="email"
                   value={values.email}
                   onChange={handleChange}
@@ -152,10 +152,10 @@ function RegisterPage(props) {
                 )}
               </Form.Item>
 
-              <Form.Item required label="Password" hasFeedback validateStatus={errors.password && touched.password ? "error" : 'success'}>
+              <Form.Item required label="Senha" hasFeedback validateStatus={errors.password && touched.password ? "error" : 'success'}>
                 <Input
                   id="password"
-                  placeholder="Enter your password"
+                  placeholder="Digite sua Senha"
                   type="password"
                   value={values.password}
                   onChange={handleChange}
@@ -169,10 +169,10 @@ function RegisterPage(props) {
                 )}
               </Form.Item>
 
-              <Form.Item required label="Confirm" hasFeedback>
+              <Form.Item required label="Confirmação" hasFeedback>
                 <Input
                   id="confirmPassword"
-                  placeholder="Enter your confirmPassword"
+                  placeholder="Confirme sua senha"
                   type="password"
                   value={values.confirmPassword}
                   onChange={handleChange}
@@ -188,7 +188,7 @@ function RegisterPage(props) {
 
               <Form.Item {...tailFormItemLayout}>
                 <Button onClick={handleSubmit} type="primary" disabled={isSubmitting}>
-                  Submit
+                  Enviar
                 </Button>
               </Form.Item>
             </Form>

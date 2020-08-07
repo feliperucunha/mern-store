@@ -18,11 +18,11 @@ function ProductInfo(props) {
 
     return (
         <div>
-            <Descriptions title="Product Info">
-                <Descriptions.Item label="Price"> {Product.price}</Descriptions.Item>
-                <Descriptions.Item label="Sold">{Product.sold}</Descriptions.Item>
-                <Descriptions.Item label="View"> {Product.views}</Descriptions.Item>
-                <Descriptions.Item label="Description"> {Product.description}</Descriptions.Item>
+            <Descriptions title="Detalhes do Produto">
+                <Descriptions.Item label="Preço"> {Product.price}</Descriptions.Item>
+                <Descriptions.Item label="Vendidos">{Product.sold}</Descriptions.Item>
+                <Descriptions.Item label="Visualizações"> {Product.views}</Descriptions.Item>
+                <Descriptions.Item label="Descrição"> {Product.description}</Descriptions.Item>
             </Descriptions>
 
             <br />
@@ -32,7 +32,7 @@ function ProductInfo(props) {
                 <Button size="large" shape="round" type="danger"
                     onClick={addToCarthandler}
                 >
-                    Add to Cart
+                    Adicionar ao Carrinho
                     </Button>
             </div>
         </div>

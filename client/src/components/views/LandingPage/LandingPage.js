@@ -44,7 +44,7 @@ function LandingPage() {
                     }
                     setPostSize(response.data.postSize)
                 } else {
-                    alert('Failed to fectch product datas')
+                    alert('Falha ao buscar produtos')
                 }
             })
     }
@@ -65,15 +65,16 @@ function LandingPage() {
 
 
     const renderCards = Products.map((product, index) => {
-
+                //responsiveness
         return <Col lg={6} md={8} xs={24}>
             <Card
+                style={{borderRadius: '8px', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)'}} 
                 hoverable={true}
                 cover={<a href={`/product/${product._id}`} > <ImageSlider images={product.images} /></a>}
             >
                 <Meta
                     title={product.title}
-                    description={`$${product.price}`}
+                    description={`R$${product.price}`}
                 />
             </Card>
         </Col>
@@ -144,7 +145,7 @@ function LandingPage() {
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
-                <h2>  Let's Travel Anywhere  <Icon type="rocket" />  </h2>
+                <h2>  Vamos comer algo gostoso </h2>
             </div>
 
 
@@ -178,7 +179,7 @@ function LandingPage() {
 
             {Products.length === 0 ?
                 <div style={{ display: 'flex', height: '300px', justifyContent: 'center', alignItems: 'center' }}>
-                    <h2>No post yet...</h2>
+                    <h2>Nada ainda</h2>
                 </div> :
                 <div>
                     <Row gutter={[16, 16]}>
@@ -186,15 +187,14 @@ function LandingPage() {
                         {renderCards}
 
                     </Row>
-
-
                 </div>
+                //responsiveness above
             }
             <br /><br />
 
             {PostSize >= Limit &&
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <button onClick={onLoadMore}>Load More</button>
+                    <button onClick={onLoadMore}>Carregar mais</button>
                 </div>
             }
 

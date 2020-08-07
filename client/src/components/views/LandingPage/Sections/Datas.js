@@ -2,33 +2,28 @@
 const price = [
     {
         "_id": 0,
-        "name": "Any",
+        "name": "Qualquer",
         "array": []
     },
     {
         "_id": 1,
-        "name": "$0 to $199",
-        "array": [0, 199]
+        "name": "R$0 a R$10",
+        "array": [0, 10]
     },
     {
         "_id": 2,
-        "name": "$200 to $249",
-        "array": [200, 249]
+        "name": "R$10 a R$20",
+        "array": [10, 20]
     },
     {
         "_id": 3,
-        "name": "$250 to $279",
-        "array": [250, 279]
-    },
-    {
-        "_id": 4,
-        "name": "$280 to $299",
-        "array": [280, 299]
+        "name": "R$20 a R$30",
+        "array": [20, 30]
     },
     {
         "_id": 5,
-        "name": "More than $300",
-        "array": [300, 1500000]
+        "name": "Mais que R$30",
+        "array": [30, 15000]
     }
 ]
 
@@ -37,31 +32,23 @@ const price = [
 const continents = [
     {
         "_id": 1,
-        "name": "Africa"
+        "name": "Lanche"
     },
     {
         "_id": 2,
-        "name": "Europe"
+        "name": "Bebida"
     },
     {
         "_id": 3,
-        "name": "Asia"
+        "name": "Acompanhamento"
     },
     {
         "_id": 4,
-        "name": "North America"
+        "name": "Combo"
     },
     {
         "_id": 5,
-        "name": "South America"
-    },
-    {
-        "_id": 6,
-        "name": "Australia"
-    },
-    {
-        "_id": 7,
-        "name": "Antarctica"
+        "name": "Promoção"
     }
 ]
 

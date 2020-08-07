@@ -7,13 +7,11 @@ const { Title } = Typography;
 const { TextArea } = Input;
 
 const Continents = [
-    { key: 1, value: "Africa" },
-    { key: 2, value: "Europe" },
-    { key: 3, value: "Asia" },
-    { key: 4, value: "North America" },
-    { key: 5, value: "South America" },
-    { key: 6, value: "Australia" },
-    { key: 7, value: "Antarctica" }
+    { key: 1, value: "Lanche" },
+    { key: 2, value: "Bebida" },
+    { key: 3, value: "Acompanhamento" },
+    { key: 4, value: "Combo" },
+    { key: 5, value: "Promoção" }
 ]
 
 export class UploadProductPage extends Component {
@@ -47,13 +45,13 @@ export class UploadProductPage extends Component {
         event.preventDefault();
 
         if (this.props.user.userData && !this.props.user.userData.isAuth) {
-            return alert('Please Log in First')
+            return alert('Entre primeiro')
         }
 
         if (!this.state.title || !this.state.description ||
             !this.state.continents || !this.state.images
             || !this.state.price) {
-            return alert('Please first fill all the fields')
+            return alert('Preencha todos os campos')
         }
 
         const variables = {
@@ -68,12 +66,12 @@ export class UploadProductPage extends Component {
         axios.post('/api/product/uploadProduct', variables)
             .then(response => {
                 if (response.data.success) {
-                    alert('video Uploaded Successfully')
+                    alert('Vídeo upado com sucesso')
                     setTimeout(() => {
                         this.props.history.push('/')
                     }, 1000);
                 } else {
-                    alert('Failed to upload video')
+                    alert('Falha ao upar vídeo')
                 }
             })
     }
