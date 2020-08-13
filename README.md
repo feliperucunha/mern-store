@@ -1,3 +1,7 @@
+This is a store for a local business that no longer exists (the owner sold it to someone else). It's a fully functional e-commerce react store
+that sells food and drinks.
+
+
 To use this application:
 
 1. make dev.js file inside config folder 
@@ -17,3 +21,7 @@ About the project:
 5. React-router-DOM (route pages)
 6. Redux store (filter data /middleman)
 7. Materialize CSS
+
+If you don't want to access it through the link of the deployed app, here are some prints:
+
+<img src="images/1.jpeg" width="200">
