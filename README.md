@@ -24,5 +24,13 @@ About the project:
 
 If you don't want to access it through the link of the deployed app, here are some prints:
 
-<img src="images/0.jpeg" width="50%">
-<img src="images/1.jpeg" width="50%">
+<img src="images/0.jpeg" width="70%">
+<img src="images/1.jpeg" width="70%">
+<img src="images/2.jpeg" width="70%">
+<img src="images/3.jpeg" width="70%">
+<img src="images/4.jpeg" width="70%">
+<img src="images/5.jpeg" width="70%">
+<img src="images/6.jpeg" width="70%">
+<img src="images/7.jpeg" width="70%">
+<img src="images/8.jpeg" width="70%">
+<img src="images/9.jpeg" width="70%">
