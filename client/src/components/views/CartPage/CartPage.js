@@ -72,11 +72,11 @@ function CartPage(props) {
     }
 
     const transactionError = () => {
-        console.log('Paypal erro')
+        console.log('Erro de transação')
     }
 
     const transactionCanceled = () => {
-        console.log('Transaction canceled')
+        console.log('Transação cancelada')
     }
 
 
@@ -93,7 +93,7 @@ function CartPage(props) {
 
                 {ShowTotal ?
                     <div style={{ marginTop: '3rem' }}>
-                        <h2>Total amount: ${Total} </h2>
+                        <h2>Valor Total: R${Total} </h2>
                     </div>
                     :
                     ShowSuccess ?
